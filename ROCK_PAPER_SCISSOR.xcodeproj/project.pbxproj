@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA6A3C091FC2112B00C65189 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6A3C081FC2112B00C65189 /* GameState.swift */; };
+		FA6A3C0A1FC21A9000C65189 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB834891FBD1FB0009037B6 /* ViewController.swift */; };
+		FA6A3C0B1FC21A9100C65189 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB834891FBD1FB0009037B6 /* ViewController.swift */; };
 		FAB834881FBD1FB0009037B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB834871FBD1FB0009037B6 /* AppDelegate.swift */; };
 		FAB8348A1FBD1FB0009037B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB834891FBD1FB0009037B6 /* ViewController.swift */; };
 		FAB8348D1FBD1FB0009037B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB8348B1FBD1FB0009037B6 /* Main.storyboard */; };
@@ -14,6 +17,7 @@
 		FAB834921FBD1FB0009037B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB834901FBD1FB0009037B6 /* LaunchScreen.storyboard */; };
 		FAB8349D1FBD1FB1009037B6 /* ROCK_PAPER_SCISSORTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8349C1FBD1FB1009037B6 /* ROCK_PAPER_SCISSORTests.swift */; };
 		FAB834A81FBD1FB1009037B6 /* ROCK_PAPER_SCISSORUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB834A71FBD1FB1009037B6 /* ROCK_PAPER_SCISSORUITests.swift */; };
+		FAB834B61FBD2103009037B6 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB834B51FBD2103009037B6 /* Sign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA6A3C081FC2112B00C65189 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		FAB834841FBD1FB0009037B6 /* ROCK_PAPER_SCISSOR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROCK_PAPER_SCISSOR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB834871FBD1FB0009037B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB834891FBD1FB0009037B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		FAB834A31FBD1FB1009037B6 /* ROCK_PAPER_SCISSORUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROCK_PAPER_SCISSORUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB834A71FBD1FB1009037B6 /* ROCK_PAPER_SCISSORUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROCK_PAPER_SCISSORUITests.swift; sourceTree = "<group>"; };
 		FAB834A91FBD1FB1009037B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB834B51FBD2103009037B6 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 		FAB834861FBD1FB0009037B6 /* ROCK_PAPER_SCISSOR */ = {
 			isa = PBXGroup;
 			children = (
+				FAB834B51FBD2103009037B6 /* Sign.swift */,
+				FA6A3C081FC2112B00C65189 /* GameState.swift */,
 				FAB834871FBD1FB0009037B6 /* AppDelegate.swift */,
 				FAB834891FBD1FB0009037B6 /* ViewController.swift */,
 				FAB8348B1FBD1FB0009037B6 /* Main.storyboard */,
@@ -260,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB8348A1FBD1FB0009037B6 /* ViewController.swift in Sources */,
+				FA6A3C091FC2112B00C65189 /* GameState.swift in Sources */,
 				FAB834881FBD1FB0009037B6 /* AppDelegate.swift in Sources */,
+				FAB834B61FBD2103009037B6 /* Sign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6A3C0A1FC21A9000C65189 /* ViewController.swift in Sources */,
 				FAB8349D1FBD1FB1009037B6 /* ROCK_PAPER_SCISSORTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6A3C0B1FC21A9100C65189 /* ViewController.swift in Sources */,
 				FAB834A81FBD1FB1009037B6 /* ROCK_PAPER_SCISSORUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
