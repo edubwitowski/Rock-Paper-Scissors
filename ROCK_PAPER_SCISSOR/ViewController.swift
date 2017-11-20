@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var scissorsButton: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
     
+    var currentGameState: GameState = GameState.start
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,16 +29,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    var currentRPScissorsIndex = 0
-    let RPScissorsList = ["Rock", "Paper", "Scissors"]
-    
-    func updateRPS() {
-        statusLabel.text = "?"
-        let RPScissorsName = RPScissorsList[currentRPScissorsIndex]
-    }
-    
     
     func resetBoard() {
         computerLabel.text = " 🤖 "
@@ -55,23 +47,21 @@ class ViewController: UIViewController {
         paperButton.isEnabled = false
         scissorsButton.isEnabled = false
     
-        let opponent = randomSign()
+         let opponent = randomSign()
         computerLabel.text = opponent.emoji
-        
-        let gameResult = playerTurn.takeTurn(opponent)
-        
-        switch gameResult {
+        currentGameState = playerTurn.takeTurn(opponent)
+    
+        switch currentGameState {
         case .draw:
            statusLabel.text = "Its a draw."
         case .lose:
            statusLabel.text = "You Lose"
         case .win:
-           statusLabel.text = "You Win!"
+           statusLabel.text = "You win!"
         case .start:
            statusLabel.text = "Rock, Paper, Scissors"
         }
-        
-        
+    
         switch playerTurn {
         case .rock:
             rockButton.isHidden = false
@@ -85,26 +75,10 @@ class ViewController: UIViewController {
             rockButton.isHidden = true
             paperButton.isHidden = true
             scissorsButton.isHidden = false
+            playAgainButton.isHidden = false
             
         }
-        playAgainButton.isHidden = false
-    }
-   
-        switch playerTurn {
-        case .rock:
-            rockButton.isHidden = false
-            paperButton.isHidden = true
-            scissorsButton.isHidden = true
-        case .hand:
-            rockButton.isHidden = true
-            paperButton.isHidden = false
-            scissorsButton.isHidden = true
-        case .scissors:
-            rockButton.isHidden = true
-            paperButton.isHidden = true
-            scissorsButton.isHidden = false
-            playAgainButton.isHidden = false
-    }
+       }
    
     @IBAction func playAgainSelected(_ sender: Any) {
         resetBoard()
@@ -117,13 +91,12 @@ class ViewController: UIViewController {
     
     @IBAction func paperSelected(_ sender: Any) {
         play(Sign.paper)
+        
     }
     
-    @IBAction func scissorsButton(_ sender: Any){
-        play(Sign.paper)
+    @IBAction func scissorsSelected(_ sender: Any) {
+        play(Sign.scissors)
     }
-    
-   
-    //Mark: End of Buttons
+  
 }
 

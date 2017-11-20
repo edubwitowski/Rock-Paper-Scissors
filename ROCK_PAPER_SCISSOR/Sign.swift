@@ -2,9 +2,10 @@
 //  Sign.swift
 //  ROCK_PAPER_SCISSOR
 //
-//  Created by Macbook on 11/15/17.
+//  Created by Macbook on 11/20/17.
 //  Copyright © 2017 Eric Witowski. All rights reserved.
 //
+
 
 import Foundation
 import GameplayKit
@@ -13,10 +14,10 @@ import GameplayKit
 let randomChoice = GKRandomDistribution(lowestValue: 0, highestValue: 2)
 
 func randomSign() -> Sign {
-    let Sign = randomChoice.nextInt()
-    if Sign == 0 {
+    let sign = randomChoice.nextInt()
+    if sign == 0 {
         return .rock
-    } else if Sign == 1 {
+    } else if sign == 1 {
         return .paper
     } else {
         return .scissors
@@ -27,7 +28,7 @@ enum Sign {
     case rock, paper, scissors
     
     var emoji: String {
-        switch Self {
+        switch self {
         case .rock:
             return " 👊 "
         case .paper:
@@ -42,7 +43,7 @@ enum Sign {
 func takeTurn(_ opponent: Sign) -> GameState {
     switch self  {
     case .rock:
-        switch  opponent {
+        switch opponent {
         case .rock:
             return GameState.draw
         case .paper:
@@ -50,8 +51,8 @@ func takeTurn(_ opponent: Sign) -> GameState {
         case .scissors:
             return GameState.win
     }
-    case .paper: 
-        switch  opponent {
+    case .paper:
+        switch opponent {
         case .rock:
             return GameState.win
         case .paper:
@@ -60,15 +61,16 @@ func takeTurn(_ opponent: Sign) -> GameState {
             return GameState.lose
         }
     case .scissors:
-    switch  opponent {
-    case .rock:
-    return GameState.lose
-    case .paper:
-    return GameState.win
-    case .scissors:
-    return GameState.draw
+       switch opponent {
+       case .rock:
+        return GameState.lose
+       case .paper:
+        return GameState.win
+       case .scissors:
+        return GameState.draw
     }
     
     }
 }
 }
+
